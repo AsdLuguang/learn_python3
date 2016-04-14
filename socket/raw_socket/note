@@ -1,0 +1,5 @@
+socket.gethostname()
+socket.gethostbyname()
+socket.socket(socket.AF_INET, socket.SOCK_RAW, 1)
+HOST.recv()
+HOSt.recvfrom()
