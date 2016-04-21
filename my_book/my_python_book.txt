@@ -1,0 +1,166 @@
+一、基本的数据类型
+
+===Python中的基本数据类型===
+
+>>> type(5)                   //不变对象
+<class 'int'>
+>>> type(3.14)
+<class 'float'>
+>>> x = "Hello World..."                   //不变对象
+>>> type(x)
+<class 'str'>
+>>> type(True)
+<class 'bool'>
+>>> type(None)                   //不变对象
+<class 'NoneType'>
+>>> 
+
+===list=== 列表(线性表)
+//--Asd
+(1)
+>>> num = [4, 6, 3]
+>>> num
+[4, 6, 3]
+>>> num.insert(1, 0)
+>>> num
+[4, 0, 6, 3]
+>>> num.append(5)
+>>> num
+[4, 0, 6, 3, 5]
+>>> num.pop(2)
+6
+>>> num
+[4, 0, 3, 5]
+>>> num.remove(5)
+>>> num
+[4, 0, 3]
+>>> num.sort()
+>>> num
+[0, 3, 4]
+
+(2)
+>>> names = ['Michael', 'Bob', 'Tracy']
+>>> temp = names
+>>> names
+['Michael', 'Bob', 'Tracy']
+>>> temp
+['Michael', 'Bob', 'Tracy']
+>>> id(names)
+3070574412
+>>> id(temp)
+3070574412
+>>> names.insert(1, 'Asd')
+>>> names
+['Michael', 'Asd', 'Bob', 'Tracy']
+>>> temp
+['Michael', 'Asd', 'Bob', 'Tracy']
+>>> id(names)
+3070574412
+>>> id(temp)
+3070574412
+>>> names = names + [1, 2, 3]
+>>> names
+['Michael', 'Asd', 'Bob', 'Tracy', 1, 2, 3]
+>>> temp
+['Michael', 'Asd', 'Bob', 'Tracy']
+>>> id(names)
+3070594188
+>>> id(temp)
+3070574412
+
+===tuple=== 元组(线性表 常量)
+//--Asd
+
+>>> t = (1, 2)
+>>> t
+(1, 2)
+>>> t1 = ()
+>>> t1
+()
+>>> type(t1)
+<class 'tuple'>
+>>> t2 = (1)
+>>> t2
+1
+>>> type(t2)
+<class 'int'>
+>>> t3 = (1, )
+>>> t3
+(1,)
+>>> type(t3)
+<class 'tuple'>
+
+===set=== 集合
+//--Asd
+
+>>> s = set('abc')
+>>> s
+{'b', 'a', 'c'}
+>>> s = set([1, 2, 3])
+>>> s
+{1, 2, 3}
+>>> s.add(4)
+>>> s
+{1, 2, 3, 4}
+>>> s.add(3)
+>>> s
+{1, 2, 3, 4}
+>>> s.remove(4)
+>>> s
+{1, 2, 3}
+>>> 
+
+===dict=== 字典(key唯一，无序)
+//--Asd
+
+>>> d = {'Michael':95, 'Bob':75, 'Tracy':85}
+>>> d
+{'Tracy': 85, 'Bob': 75, 'Michael': 95}
+>>> d['Michael']
+95
+>>> d = {'a':12, 'b':23, 'c':34}
+>>> d
+{'b': 23, 'a': 12, 'c': 34}
+>>> d['a']
+12
+>>> type(d)
+<class 'dict'>
+>>> d['d'] = 45
+>>> d
+{'b': 23, 'd': 45, 'a': 12, 'c': 34}
+>>> d['d'] = 56
+>>> d
+{'b': 23, 'd': 56, 'a': 12, 'c': 34}
+>>> d.pop('c')
+34
+>>> d
+{'b': 23, 'd': 56, 'a': 12}
+>>> 
+
+
+
+二、条件
+
+if-elif-[elif-]else
+
+if <条件判断>:
+
+if x:
+    print('True');
+只要x是非零数值、非空字符串、非空list等，就判断为True，否则为False。
+
+
+===小测试===
+
+i = [1];
+j = 4;
+
+def test():
+    i[0] = 9;
+    j = 6;
+
+test()
+
+print(i, j)
+=============================================
+
